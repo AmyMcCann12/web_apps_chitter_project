@@ -28,11 +28,11 @@ CREATE TABLE posts (
 );
 
 -- Add any records that are needed for the tests to run
-INSERT INTO users (email, password, name, username) VALUES ('test1@emailaddress.com', 'password1!', 'person1', 'username1');
-INSERT INTO users (email, password, name, username) VALUES ('test2@emailaddress.com', 'password2!', 'person2', 'username2');
-INSERT INTO users (email, password, name, username) VALUES ('test3@emailaddress.com', 'password3!', 'person3', 'username3');
-INSERT INTO users (email, password, name, username) VALUES ('test4@emailaddress.com', 'password4!', 'person4', 'username4');
-INSERT INTO users (email, password, name, username) VALUES ('test5@emailaddress.com', 'password5!', 'person5', 'username5');
+INSERT INTO users (email, password, name, username) VALUES ('user1@emailaddress.com', 'password1!', 'person1', 'username1');
+INSERT INTO users (email, password, name, username) VALUES ('user2@emailaddress.com', 'password2!', 'person2', 'username2');
+INSERT INTO users (email, password, name, username) VALUES ('user3@emailaddress.com', 'password3!', 'person3', 'username3');
+INSERT INTO users (email, password, name, username) VALUES ('user4@emailaddress.com', 'password4!', 'person4', 'username4');
+INSERT INTO users (email, password, name, username) VALUES ('user5@emailaddress.com', 'password5!', 'person5', 'username5');
 
 INSERT INTO posts (content, post_date_time, user_id) VALUES ('This is post number 1 contents.', '2000-12-01 12:00:00', 1);
 INSERT INTO posts (content, post_date_time, user_id) VALUES ('This is post number 2 contents.', '2001-12-01 11:00:00', 2);
