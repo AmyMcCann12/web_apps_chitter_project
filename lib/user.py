@@ -1,15 +1,19 @@
 
 class User:
-    def __init__(self, id, email, password, name, username):
+    def __init__(self, id, email, password, name, username, posts = None):
         self.id = id
         self.email = email
         self.password = password
         self.name = name
         self.username = username
+        self.posts = posts or []
     
     def __repr__(self):
-        return f"User({self.id}, {self.email}, {self.password}, {self.name}, {self.username})"
-
+        if self.posts == []:
+            return f"User({self.id}, {self.email}, {self.password}, {self.name}, {self.username})"
+        else:
+            return f"User({self.id}, {self.email}, {self.password}, {self.name}, {self.username}, {self.posts})"
+        
     def __eq__(self,other):
         return self.__dict__ == other.__dict__
     

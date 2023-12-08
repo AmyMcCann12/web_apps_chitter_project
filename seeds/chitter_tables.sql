@@ -1,8 +1,8 @@
 -- First, we must delete (drop) all our tables
-DROP TABLE IF EXISTS users;
-DROP SEQUENCE IF EXISTS users_id_seq;
 DROP TABLE IF EXISTS posts;
 DROP SEQUENCE IF EXISTS posts_id_seq; 
+DROP TABLE IF EXISTS users;
+DROP SEQUENCE IF EXISTS users_id_seq;
 
 -- Create the table without the foreign key first.
 CREATE SEQUENCE IF NOT EXISTS users_id_seq;
