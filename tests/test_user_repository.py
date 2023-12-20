@@ -80,9 +80,15 @@ def test_find_with_posts(db_connection):
             Post(9,'This is post number 9 contents.', datetime(2003,12,22,9,00,00), 2)
         ])
 
-
 """
 When we call UserRepository #find_with_posts
 and there are no posts
 Then we still get the user, but the posts attribute is empty
 """
+
+def test_find_with_no_posts(db_connection):
+    db_connection.seed('seeds/chitter_tables.sql')
+    repository = UserRepository(db_connection)
+    repository.create("test@useremail.com", "password!", "test user", "test username")
+    user_with_posts = repository.find_with_posts(6)
+    assert user_with_posts ==  User(6, "test@useremail.com", "password!", "test user", "test username")

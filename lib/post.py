@@ -1,10 +1,11 @@
 
 class Post:
-    def __init__(self, id, content, post_date_time, user_id):
+    def __init__(self, id, content, post_date_time, user_id, user = None):
         self.id = id
         self.content = content
         self.post_date_time = post_date_time
         self.user_id = user_id
+        self.user = user or []
 
     def __repr__(self):
         return f"Post({self.id}, {self.content}, {self.post_date_time}, {self.user_id})"
